@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f0ff;
+    color: #003366;
+    margin: 0;
+    padding: 0 20px;
+}
+
+h1 {
+    color: #0059b3;
+    text-align: center;
+    margin-top: 30px;
+}
+
+nav {
+    background-color: #cce0ff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+nav a {
+    color: #003366;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #0073e6;
+    text-decoration: underline;
+}
+
+hr {
+    border: 1px solid #99c2ff;
+    margin: 20px 0;
+}
+
+h2 {
+    color: #004080;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+/* Tambahan untuk galeri */
+img {
+    border: 3px solid #99c2ff;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 5px;
+    width: 200px;
+    height: auto;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Container blog */
+.blog-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Artikel individual */
+.blog-article {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 2px solid #99c2ff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+    text-align: justify;
+}
+
+/* Gaya untuk halaman contact */
+.contact-container {
+    max-width: 600px;
+    margin: 50px auto; /* Menempatkan konten di tengah halaman */
+    padding: 30px;
+    background-color: #ffffff;
+    border: 2px solid #99c2ff; /* Border di sekeliling */
+    border-radius: 10px; /* Sudut yang lebih lembut */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan ringan untuk efek 3D */
+    text-align: center;
+}
+
+.contact-container h2 {
+    color: #004080; /* Warna judul */
+    margin-bottom: 20px;
+}
+
+.contact-container p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
