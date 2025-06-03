@@ -1,18 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Website Riano</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</head>
 <body>
     <h1>Contact</h1>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="scripts.js"></script>
     <nav>
         <a href="index.html">Home</a> | 
         <a href="gallery.html">Gallery</a> | 
-        <a href="blog.html">Blog</a> | 
-        <a href="contact.html">Contact</a>
-    </nav>
+        <a href="blog.php">Blog</a> | 
+        <a href="contact.html">Contact</a> </nav>
     <hr>
 
     <div class="contact-container">
         <h2>Hubungi Kami</h2>
         <p>Email: kaunangrianort@gmail.com</p>
         <p>Telepon: 085796150414</p>
+
+        <form class="contact-form" id="contact-form" action="submit_contact.php" method="post">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" value="" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Masukkan email Anda" value="" required>
+
+            <label for="message">Pesan:</label>
+            <textarea id="message" name="message" placeholder="Tulis pesan Anda di sini..." rows="5" required></textarea>
+
+            <button type="submit" id="submit-btn">Kirim Pesan</button>
+        </form>
+
+        <div id="notification" class="notification"></div>
     </div>
+
+    <footer class="footer">
+        <div class="footer-content-wrapper"> <p>© Riano</p>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram" title="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter" title="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Discord" title="Join our Discord community"><i class="fab fa-discord"></i></a>
+                <a href="#" aria-label="Facebook" title="Follow us on Facebook"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
 </body>
+</html>

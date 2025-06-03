@@ -1,0 +1,297 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Variabel CSS untuk kemudahan tema dan konsistensi */
+:root {
+    --primary-color: #a777e3; /* Warna ungu untuk aksen */
+    --secondary-color: #6c757d; /* Abu-abu muted */
+    --dark-bg: rgba(0, 0, 0, 0.8); /* Latar belakang gelap untuk header/footer */
+    --light-text: #fefefe; /* Teks terang di latar gelap */
+    --dark-text: #343a40; /* Teks gelap di latar terang */
+    --form-bg: rgba(255, 255, 255, 0.1); /* Latar belakang form transparan */
+    --form-input-bg: rgba(255, 255, 255, 0.9); /* Latar belakang input form */
+    --shadow-color: rgba(0, 0, 0, 0.6); /* Warna bayangan umum */
+}
+
+body {
+    /* Latar belakang gambar dengan efek cover dan fixed, konsisten dengan blog */
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--light-text); /* Warna teks utama */
+    /* Padding hanya di atas dan bawah untuk memungkinkan elemen full-width */
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    position: relative;
+    min-height: 100vh; /* Memastikan body minimal setinggi viewport */
+    overflow-x: hidden; /* Mencegah scrollbar horizontal */
+}
+
+/* Overlay gelap agar teks lebih terbaca di atas gambar latar, konsisten dengan blog */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Warna overlay gelap */
+    z-index: -1; /* Pastikan overlay di belakang konten */
+}
+
+/* Judul utama, konsisten dengan blog */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: var(--light-text);
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Bayangan teks untuk keterbacaan */
+}
+
+/* Navigasi, konsisten dengan blog */
+nav {
+    margin-bottom: 20px;
+    padding: 10px 0; /* Sedikit padding untuk navigasi */
+}
+
+nav a {
+    color: var(--light-text);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary-color); /* Warna ungu saat hover */
+    text-shadow: 0 0 8px var(--primary-color); /* Efek glow saat hover */
+}
+
+/* Garis horizontal (dihilangkan sepenuhnya) */
+hr {
+    display: none; /* Menyembunyikan elemen <hr> sepenuhnya */
+    border: none;
+    height: 0;
+    margin: 0;
+}
+
+/* Kontainer form kontak */
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--form-bg); /* Latar belakang transparan */
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px var(--shadow-color); /* Bayangan yang lebih dalam */
+    backdrop-filter: blur(6px); /* Efek blur pada latar belakang */
+    text-align: left;
+    color: var(--light-text);
+    margin-top: 30px; /* Jarak dari navigasi */
+    margin-bottom: 50px; /* Jarak ke footer */
+}
+
+/* Subjudul di dalam kontainer kontak */
+.contact-container h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--primary-color); /* Warna ungu untuk subjudul */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Form styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: var(--light-text);
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px; /* Padding sedikit lebih besar */
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: var(--form-input-bg); /* Latar belakang input */
+    color: var(--dark-text); /* Warna teks input */
+    transition: all 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(52, 58, 64, 0.7); /* Warna placeholder yang lebih terang */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid var(--primary-color); /* Outline ungu saat fokus */
+    background-color: #fff; /* Latar belakang putih saat fokus */
+    box-shadow: 0 0 10px rgba(167, 119, 227, 0.5); /* Efek glow saat fokus */
+}
+
+.contact-form button {
+    background-color: var(--primary-color); /* Warna ungu untuk tombol */
+    color: #fff;
+    border: none;
+    padding: 14px; /* Padding lebih besar untuk tombol */
+    border-radius: 8px;
+    font-size: 1.1rem; /* Ukuran font tombol lebih besar */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Bayangan tombol */
+}
+
+.contact-form button:hover {
+    background-color: #9257db; /* Ungu lebih gelap saat hover */
+    transform: translateY(-3px); /* Efek angkat saat hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Bayangan lebih besar saat hover */
+}
+
+/* Notifikasi (untuk pesan sukses/error) */
+.notification {
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    display: none; /* Sembunyikan secara default, ditampilkan dengan JS */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.notification.show {
+    display: block;
+    opacity: 1;
+}
+
+.notification.success {
+    background-color: rgba(40, 167, 69, 0.8); /* Hijau untuk sukses */
+    color: #fff;
+}
+
+.notification.error {
+    background-color: rgba(220, 53, 69, 0.8); /* Merah untuk error */
+    color: #fff;
+}
+
+/* Footer Full Width dengan Box Shadow Mentok Kiri Kanan, konsisten dengan blog */
+.footer {
+    width: 100%; /* Pastikan lebar 100% */
+    background-color: var(--dark-bg); /* Latar belakang gelap */
+    color: var(--light-text);
+    padding: 20px 0; /* Padding horizontal diatur ke 0 untuk box-shadow full-width */
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 60px; /* Jarak dari konten di atasnya */
+    box-shadow: 0 -6px 18px rgba(0, 0, 0, 0.6); /* Box shadow diterapkan di sini */
+    box-sizing: border-box; /* Penting untuk memastikan padding tidak menambah lebar */
+}
+
+/* Konten di dalam footer tetap terpusat dan dibatasi lebarnya, konsisten dengan blog */
+.footer-content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px; /* Padding untuk konten di dalam wrapper */
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Agar ikon bisa wrap di layar kecil */
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: var(--light-text);
+    font-size: 1.5rem; /* Ukuran ikon sedikit lebih besar */
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: var(--primary-color); /* Warna ungu saat hover */
+    transform: scale(1.2); /* Efek zoom saat hover */
+}
+
+/* Responsif, konsisten dengan blog */
+@media (max-width: 768px) {
+    body {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+        margin: 0 10px;
+    }
+
+    .contact-container {
+        padding: 20px;
+        margin-left: 10px;
+        margin-right: 10px; /* Tambahkan margin horizontal agar tidak menempel ke sisi layar di mobile */
+    }
+
+    .contact-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.95rem;
+    }
+
+    .contact-form button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .footer-content-wrapper {
+        padding: 0 10px;
+    }
+
+    .social-links a {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .contact-container {
+        padding: 15px;
+    }
+
+    .contact-container h2 {
+        font-size: 1.5rem;
+    }
+}

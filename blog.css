@@ -1,0 +1,161 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    /* Ubah padding body: hanya padding atas/bawah, hilangkan padding horizontal */
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Overlay gelap */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+/* Judul utama */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+/* Navigasi */
+nav {
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #a777e3;
+}
+
+/* Garis ungu dihilangkan sepenuhnya (jika ada elemen <hr> di HTML) */
+hr {
+    display: none; /* Menyembunyikan elemen <hr> */
+    border: none; /* Pastikan tidak ada border */
+    height: 0;    /* Pastikan tinggi 0 */
+    margin: 0;    /* Pastikan tidak ada margin */
+}
+
+
+/* Container Artikel */
+.blog-container {
+    max-width: 900px;
+    margin: 0 auto; /* Tengah secara horizontal */
+    padding: 30px 20px;
+    text-align: left;
+}
+
+/* Artikel Individual */
+.blog-article {
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+.blog-article:hover {
+    transform: translateY(-5px);
+}
+
+.blog-article h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.blog-article p {
+    font-size: 1.1rem;
+    color: #ddd;
+    line-height: 1.7;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .blog-article h2 {
+        font-size: 1.5rem;
+    }
+
+    .blog-article p {
+        font-size: 1rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+        margin: 0 10px;
+    }
+}
+
+/* Footer Full Width dengan Box Shadow Mentok Kiri Kanan */
+.footer {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #eee;
+    width: 100%; /* Pastikan lebar 100% */
+    padding: 20px 0; /* Padding horizontal diatur ke 0 untuk box-shadow full-width */
+    font-size: 1rem;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5); /* Box shadow diterapkan di sini */
+    margin-top: 50px;
+    box-sizing: border-box; /* Penting untuk memastikan padding tidak menambah lebar */
+}
+
+/* Konten di dalam footer tetap terpusat dan dibatasi lebarnya */
+/* Anda perlu membungkus konten footer di dalam div terpisah (misal: <div class="footer-content-wrapper">) */
+/* jika Anda ingin kontennya tidak full-width */
+.footer-content-wrapper { /* Tambahkan div ini di HTML Anda */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px; /* Padding untuk konten di dalam footer */
+    text-align: center;
+}
+
+.footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.footer .social-links a {
+    color: #eee;
+    font-size: 1.3rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.footer .social-links a:hover {
+    color: #a777e3;
+    transform: scale(1.2);
+}

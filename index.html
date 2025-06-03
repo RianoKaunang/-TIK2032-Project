@@ -2,19 +2,57 @@
 <html>
 <head>
     <title>Website Riano - Home</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="script.js"></script>
+
 </head>
-<body onload="showWelcomeMessage()">    
-    <h1>Welcome!!</h1>
-    <nav>
-        <a href="index.html">Home</a> | 
-        <a href="gallery.html">Gallery</a> | 
-        <a href="blog.html">Blog</a> | 
-        <a href="contact.html">Contact</a>
-    </nav>
-    <hr>
-    <h2>Home</h2>
-    <p>Selamat datang di halaman Utama Website Riano.</p>
+<body onload="showWelcomeMessage()">   
+        <div class="background-container" id="background-container">
+        <div class="background-layer" id="bg-layer-1"></div>
+        <div class="background-layer" id="bg-layer-2"></div>
+    </div>
+     <header class="header">
+        <div class="logo">
+            <h1>Riano Website</h1>
+        </div>
+        <nav class="nav">
+            <a href="#" class="nav-link active">Home</a>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="blog.php" class="nav-link">Blog</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+         <main class="main">
+        <section class="content">
+            <div class="cards-container">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/724626/pexels-photo-724626.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Galeri" />
+                    <h3>Blog</h3>
+                    <p>Fakta Menarik tentang hewan-hewan!</p>
+                    <a href="blog.html" class="card-link">Read Blog <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="card">
+                    <img src="https://media.istockphoto.com/id/1218210864/id/foto/dua-jerapah-terlihat-bermain-bersama-jerapah.jpg?s=2048x2048&w=is&k=20&c=pwkIaLmF0Jqlw6IW56waWttReeuAwaxre2YjDtRljRY=" alt="Blog" />
+                    <h3>Gallery</h3>
+                    <p>Anda bisa Melihat foto foto menarik hewan-hewan yang ada di hutan!</p>
+                    <a href="gallery.html" class="card-link">See Gallery <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="about">
+                <h3>About Me</h3>
+                <p>kontak kami jika ada yang ingin ditanyakan!</p>
+                <a href="contact.php" class="cta-button">Pelajari Lebih Lanjut</a>
+            </div>
+        </section>
+    </main>
+   <footer class="footer">
+    <p>© Riano</p>
+    <div class="social-links">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+    </div>
+</footer>
 </body>
 </html>

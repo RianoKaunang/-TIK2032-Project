@@ -1,24 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Website Riano - Gallery</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="gallery.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="script.js"></script>
 </head>
-<body>
-    
-    <h1>Gallery</h1>
-    <nav>
-        <a href="index.html">Home</a> | 
-        <a href="gallery.html">Gallery</a> | 
-        <a href="blog.html">Blog</a> | 
-        <a href="contact.html">Contact</a>
-    </nav>
-    <hr>
-    <h2>Gallery</h2>
-    <p>Kumpulan foto-foto:</p>
-    <img src="image/image1.jpeg" alt="Foto 1">
-    <img src="image/image2.jpeg" alt="Foto 2">
-    <img src="image/image3.jpeg" alt="Foto 3">
+<body class="page-container">
+    <div class="content-wrap">
+        <h1>Gallery</h1>
+        <nav>
+            <a href="index.html">Home</a> | 
+            <a href="gallery.html">Gallery</a> | 
+            <a href="blog.php">Blog</a> | 
+            <a href="contact.html">Contact</a>
+        </nav>
+        <p>Kumpulan foto-foto:</p>
+
+        <img src="image/image1.jpeg" alt="Foto 1" />
+        <img src="image/image2.jpeg" alt="Foto 2" />
+        <img src="image/image3.jpeg" alt="Foto 3" />
+    </div>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <p>© Riano</p>
+        <div class="social-links">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
